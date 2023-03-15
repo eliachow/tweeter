@@ -1,0 +1,14 @@
+header {
+  background-color: #D79923;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  height: 520px;
+  width: 100%;
+  color: white;
+  padding-top: 150px;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
