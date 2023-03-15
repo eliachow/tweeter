@@ -1,0 +1,27 @@
+nav { 
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.nav-title {
+  font-family: 'Bungee', cursive;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inline-item-block {
+  display: inline;
+}
+
