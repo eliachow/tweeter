@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
 //listen for event to count characters
-let characterCount = 0;
+let inputCount = 0;
+const textAreaCount = 140;
   $("textarea").on("input", function() {
-    characterCount = this.value.length;
+    inputCount = this.value.length;
+    const characterCount = textAreaCount - inputCount;
     console.log("characterCount: ", characterCount)
   });
   
