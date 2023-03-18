@@ -32,5 +32,39 @@ main {
   flex-wrap: wrap;
 }
 
+.new-tweet {
+  width: 100%;
+}
+
+.tweet-title-textarea {
+  border-bottom: 5px solid;
+}
+
+main h3 {
+  margin-bottom: 1%;
+}
+
+textarea {
+  border: none;
+  background-color: #f4f1ec;
+  font-weight: bold;
+  width: 100%;
+}
+
+
+main button {
+  color: white;
+  background-color: #4056A1;
+  padding: 5px 15px;
+  border: none;
+}
+
+.form-button-count {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  margin-top: 1%;
+}
+
 
  
