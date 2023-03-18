@@ -12,3 +12,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+header h2 {
+  margin-top: 0;
+}
