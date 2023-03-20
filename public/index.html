@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/article.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -44,7 +45,7 @@
         </div>
     </nav>
 
-    <header>
+    <header class="page-head">
       <div class="Aligner">
         <img src="/images/profile-hex.png">
       </div>
@@ -71,6 +72,26 @@
           </div>
         </form>
       </section>
+      <article class="container tweet">
+        <header>
+          <span class="container user-info">
+          <span class="container">
+            <img src="/images/profile-hex.png">
+            <h4>Newton</h4>
+          </span>
+          <span class="handle">@sirIsaac</span>
+          </span>
+          <div>If I have seen further it is by standing on the shoulders of giants</div>
+        </header>
+        <footer class="container">
+          <span>10 days ago</span>
+          <span>
+            <i class="fa-solid fa-flag icon"></i>
+            <i class="fa-sharp fa-solid fa-retweet icon"></i>
+            <i class="fa-sharp fa-solid fa-heart icon"></i>
+          </span>
+        </footer>
+      </article>
     </main>
   </body>
 </html>

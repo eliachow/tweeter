@@ -1,0 +1,47 @@
+article.tweet {
+  border: 5px solid;
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+
+article.tweet .user-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info span {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+article.tweet img {
+  width: 75px;
+  height: 80px;
+}
+
+article.tweet .handle {
+  color: #D3D3D3;
+  font-weight: bold;
+}
+
+article.tweet header div {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-bottom: 5px solid;
+  font-weight: bold;
+}
+
+
+.icon {
+  color: #4056A1;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size:medium;
+  font-weight: bold;
+}

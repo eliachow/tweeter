@@ -63,7 +63,8 @@ main button {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
-  margin-top: 1%;
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 
