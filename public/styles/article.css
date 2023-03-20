@@ -5,6 +5,10 @@ article.tweet {
   padding: 15px;
 }
 
+article.tweet:hover {
+  box-shadow: 5px 5px #D3D3D3;
+}
+
 
 article.tweet .user-info {
   display: flex;
@@ -36,6 +40,10 @@ article.tweet header div {
 
 .icon {
   color: #4056A1;
+}
+
+.icon:hover {
+  color: #D79923;
 }
 
 article.tweet footer {
