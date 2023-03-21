@@ -70,4 +70,12 @@ $(document).ready(function() {
 
   renderTweets(data);
 
+
+  //event listener submit
+  $(".tweet-form").submit(function(event) {
+    event.preventDefault();
+    $.ajax( '/tweets', { method: 'POST', data: $( this ).serialize() }) 
+  })
+
+
 });
