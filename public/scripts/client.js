@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+
 $(document).ready(function() {
 
   //render each tweet from data array
@@ -29,7 +31,7 @@ $(document).ready(function() {
           <div>${tweetData.content.text}</div>
         </header>
         <footer class="container">
-          <span>${tweetData.created_at} days ago</span>
+          <span>${timeago.format(tweetData.created_at)}</span>
           <span>
             <i class="fa-solid fa-flag icon"></i>
             <i class="fa-sharp fa-solid fa-retweet icon"></i>
