@@ -48,7 +48,15 @@ $(document).ready(function() {
   //event listener submit
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
+    const textArea = $(this[0]).val();
+    if (!textArea || textArea.trim() === "") {
+      alert("Oops, we can't hear you, enter a tweet!");
+    }
+    if (textArea.length > 140) {
+      alert("Tweet cannot exceed 140 characters");
+    }
     $.ajax('/tweets', { method: 'POST', data: $(this).serialize() });
+    
   });
 
 
