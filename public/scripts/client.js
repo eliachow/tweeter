@@ -4,15 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(document).ready(function() {
 
   //render each tweet from data array
   const renderTweets = function(tweets) {
-  // loops through tweets
+
+    // clear existing rendered tweets to avoid duplication & reverse order to have newest rendered at the top
+    $('#tweets-container').empty();
+    tweets.reverse();
+
+    // loops through each tweets to send tweet object data to render the article
     for (const element of tweets) {
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
       $('#tweets-container').append(createTweetElement(element));
     }
   };
@@ -39,28 +41,41 @@ $(document).ready(function() {
           </span>
         </footer>
       </article>`);
-  
-    // return rendered <article>
+
     return $tweet;
   }
 
 
-  //event listener submit
+  //event listener on form submit
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
+    const data = $(this).serialize();
+
+    //check if text area value is blank
     const textArea = $(this[0]).val();
     if (!textArea || textArea.trim() === "") {
       alert("Oops, we can't hear you, enter a tweet!");
     }
+
+    //check if characters exceed 140
     if (textArea.length > 140) {
       alert("Tweet cannot exceed 140 characters");
     }
-    $.ajax('/tweets', { method: 'POST', data: $(this).serialize() });
+    
+    //when a new tweet is submitted in the form load tweets & clear the text area
+    $.ajax('/tweets', {
+      method: 'POST',
+      data: data,
+      success: function() {
+        loadTweets();
+        $('#tweet-text').val('');
+      }
+    });
     
   });
 
 
-  // fetch tweets from /tweets
+  // fetch tweets data from /tweets
   function loadTweets() {
     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
       .then(function(data) {
@@ -69,6 +84,7 @@ $(document).ready(function() {
       });
   }
 
+  //load existing tweets
   loadTweets();
 
 });
