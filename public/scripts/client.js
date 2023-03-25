@@ -20,6 +20,7 @@ $(document).ready(function() {
   };
 
   //render article element for each tweet
+  // text method escapes unsafe characters, protecting text area from unintential JS
   function createTweetElement(tweetData) {
     const $tweet = $(`<article class="container tweet">
         <header>
@@ -30,7 +31,7 @@ $(document).ready(function() {
           </span>
           <span class="handle">${tweetData.user.handle}</span>
           </span>
-          <div>${tweetData.content.text}</div>
+          ${$("<div>").text(tweetData.content.text).html()}
         </header>
         <footer class="container">
           <span>${timeago.format(tweetData.created_at)}</span>
@@ -44,7 +45,7 @@ $(document).ready(function() {
 
     return $tweet;
   }
-
+  
 
   //event listener on form submit
   $(".tweet-form").submit(function(event) {
@@ -53,7 +54,7 @@ $(document).ready(function() {
 
     //check if text area value is blank
     const textArea = $(this[0]).val();
-    if (!textArea || textArea.trim() === "") {
+    if (!textArea.trim()) {
       alert("Oops, we can't hear you, enter a tweet!");
     }
 
@@ -62,13 +63,14 @@ $(document).ready(function() {
       alert("Tweet cannot exceed 140 characters");
     }
     
-    //when a new tweet is submitted in the form load tweets & clear the text area
+    //when a new tweet is submitted in the form load tweets, clear the text area, & reset character counter to 140.
     $.ajax('/tweets', {
       method: 'POST',
       data: data,
       success: function() {
         loadTweets();
         $('#tweet-text').val('');
+        $('.counter').val(140);
       }
     });
     
