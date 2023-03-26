@@ -61,7 +61,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div class="error-notification"></div>
         <form method="post" action="/tweets" class="tweet-form">
           <div class="container tweet-title-textarea">
           <h3>
@@ -75,8 +75,7 @@
           </div>
         </form>
       </section>
-      <section id="tweets-container">
-      </section>
+      <section id="tweets-container"></section>
     </main>
   </body>
 </html>

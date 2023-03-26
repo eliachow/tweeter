@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('#tweets-container').empty();
     tweets.reverse();
 
-    // loops through each tweets to send tweet object data to render the article
+    // loop through each tweets to send tweet object data to render the article
     for (const element of tweets) {
       $('#tweets-container').append(createTweetElement(element));
     }
@@ -31,8 +31,10 @@ $(document).ready(function() {
           </span>
           <span class="handle">${tweetData.user.handle}</span>
           </span>
-          ${$("<div>").text(tweetData.content.text).html()}
-        </header>
+          <div class="text-input">
+            ${$("<div>").text(tweetData.content.text).html()}
+          </div>
+          </header>
         <footer class="container">
           <span>${timeago.format(tweetData.created_at)}</span>
           <span>
@@ -45,22 +47,39 @@ $(document).ready(function() {
 
     return $tweet;
   }
-  
+
+  // render error message
+  function error(msg) {
+    const $error = $(`
+      <div class="error-msg">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="error-message">${msg}</span>
+        <i class="fa-solid fa-circle-exclamation"></i>
+      </div>
+    `);
+
+    //empty existing messages and input new content, using slide down effect
+    $('.error-notification')
+      .empty()
+      .append($error)
+      .slideDown("slow");
+  }
 
   //event listener on form submit
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
-
-    //check if text area value is blank
     const textArea = $(this[0]).val();
+    
+    //check if text area value is blank
     if (!textArea.trim()) {
-      alert("Oops, we can't hear you, enter a tweet!");
+      error(`Oops, we can't hear you, enter a tweet!`);
     }
 
     //check if characters exceed 140
     if (textArea.length > 140) {
-      alert("Tweet cannot exceed 140 characters");
+      error(`Tweet cannot exceed 140 characters`);
+      return;
     }
     
     //when a new tweet is submitted in the form load tweets, clear the text area, & reset character counter to 140.
@@ -71,6 +90,7 @@ $(document).ready(function() {
         loadTweets();
         $('#tweet-text').val('');
         $('.counter').val(140);
+        $(".error-notification").slideUp("slow");
       }
     });
     
