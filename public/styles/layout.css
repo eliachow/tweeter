@@ -40,6 +40,14 @@ main {
   border-bottom: 5px solid;
 }
 
+.error-msg {
+  color: red;
+  border: 5px solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
 main h3 {
   margin-bottom: 1%;
 }
@@ -57,6 +65,7 @@ main button {
   background-color: #4056A1;
   padding: 5px 15px;
   border: none;
+  border-radius: 5px;
 }
 
 .form-button-count {
