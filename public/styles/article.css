@@ -1,3 +1,5 @@
+/* mobile styles */
+
 #tweets-container {
   width: 100%;
 }
@@ -60,4 +62,15 @@ article.tweet footer {
   padding: 10px;
   font-size:medium;
   font-weight: bold;
+}
+
+
+/* desktop styles */
+
+@media only screen and (min-width: 1024px) {
+
+#tweets-container {
+  padding-right: 50px;
+}
+
 }

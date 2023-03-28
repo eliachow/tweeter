@@ -1,7 +1,8 @@
+/* mobile styles */
+
 nav { 
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -25,3 +26,42 @@ nav {
   display: inline;
 }
 
+nav button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  animation: bounce .4s infinite alternate;
+}
+
+nav button:hover {
+  color: #e5ff00;
+}
+
+@keyframes bounce {
+  to {
+      transform: scale(1.2);
+    }
+}
+
+/* desktop styles */
+
+@media only screen and (min-width: 1024px) {
+
+  nav {
+      height: 120px;
+      width: 100%;
+      background-color: #4056A1;
+      color: #FFFFFF;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+    }
+
+    nav button {
+      background-color: #4056A1;
+    }
+
+}

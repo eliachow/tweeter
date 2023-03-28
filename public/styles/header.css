@@ -1,3 +1,5 @@
+/* mobile styles */
+
 .page-head {
   background-color: #D79923;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
@@ -15,4 +17,27 @@
 
 header h2 {
   margin-top: 0;
+}
+
+
+/* desktop styles */
+
+@media only screen and (min-width: 1024px) {
+
+  .head-main-section {
+    display: flex;
+    flex: row;
+  }
+
+  .page-head {
+    width: 33%;
+    margin: 170px 75px 75px 75px;
+    padding: 95px 50px 75px 50px;
+    border-radius: 10px;
+  }
+
+  main {
+    width: 66.7%;
+  }
+
 }
