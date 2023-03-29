@@ -4,8 +4,8 @@ $(document).ready(function() {
   let characterCount = 0;
   $("textarea").on("input", function() {
     characterCount = 140 - (this.value.length);
+    // replace hardcoded '140' with the character count
     $(this).parent().siblings().children("output").html(characterCount);
-    // $(".counter").html(characterCount)
 
     //change negative numbers to red
     if (characterCount < 0) {

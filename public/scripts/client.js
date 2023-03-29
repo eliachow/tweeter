@@ -6,14 +6,10 @@
 
 $(document).ready(function() {
 
-
   // render tweet form using slideDown when nav button is clicked
-  // 👉👉👉import form, blocking post request
-  const $newTweetForm = $(`
-         
-        
-  `);
-
+  
+  // 👉👉👉Strecht activity incomplete: import form, blocking post request
+  const $newTweetForm = $(``);
 
   $(".bounce").on("click", function() {
     $('#new-tweet-form-container')
@@ -21,8 +17,6 @@ $(document).ready(function() {
       .slideDown("slow");
   });
 
-
-  // -------------------------------------------------------------------------
 
   //render each tweet from data array
   const renderTweets = function(tweets) {
@@ -127,9 +121,7 @@ $(document).ready(function() {
   //load existing tweets
   loadTweets();
 
-
-
-
+  
 });
 
 
