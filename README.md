@@ -22,7 +22,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of desktop view of Tweeter app"](https://github.com/eliachow/tweeter/blob/master/public/images/tweeter_1.PNG)
-!["Screenshot of mobile & tablet view of Tweeter app"](https://github.com/eliachow/tweeter/blob/master/public/images/tweeter_2.PNG)
-!["Screenshot of error message: blank tweet"](https://github.com/eliachow/tweeter/blob/master/public/images/tweeter_3.PNG)
-!["Screenshot of error message: exceeding character limit"](https://github.com/eliachow/tweeter/blob/master/public/images/tweeter_4.PNG)
+!["Screenshot of desktop view of Tweeter app"](https://github.com/eliachow/tweeter/blob/master/public/docs/tweeter_1.PNG?raw=true)
+!["Screenshot of mobile & tablet view of Tweeter app"](https://github.com/eliachow/tweeter/blob/master/public/docs/tweeter_2.PNG?raw=true)
+!["Screenshot of error message: blank tweet"](https://github.com/eliachow/tweeter/blob/master/public/docs/tweeter_3.PNG?raw=true)
+!["Screenshot of error message: exceeding character limit"](https://github.com/eliachow/tweeter/blob/master/public/docs/tweeter_4.PNG?raw=true)
