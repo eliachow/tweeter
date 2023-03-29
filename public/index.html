@@ -6,7 +6,6 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -44,38 +43,49 @@
       <span class="nav-title">tweeter</span>
       <div class="nav-content">
         <div class="inline-item-block"><strong>Write</strong>&nbsp; a new tweet</div>
-        <i class="fa-solid fa-angles-down"></i>
+        <button class="bounce" type="button">
+          <i class="fa-solid fa-angles-down"></i> 
+        </button>
+        
         </div>
     </nav>
 
-    <header class="page-head">
-      <div class="Aligner">
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div class="Aligner">
-        <h2>Your Name</h2>
-      </div>
-    </header>
+    <!-- header & main content -->
+    <div class="container head-main-section">
+    
+      <!-- header -->
+      <header class="page-head">
+        <div class="Aligner">
+          <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div class="Aligner">
+          <h2>Your Name</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error-notification"></div>
-        <form method="post" action="/tweets" class="tweet-form">
-          <div class="container tweet-title-textarea">
-          <h3>
-            <label for="tweet-text">What are you humming about?</label>
-          </h3>
-            <textarea name="text" id="tweet-text" placeholder="tweet here..."></textarea>
-          </div>
-          <div class="container form-button-count">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error-notification"></div>
+          <!-- 👉👉👉Stretch activity incomplete: move to client.js $newTweetForm -->
+          <form method="post" action="/tweets" class="tweet-form">
+            <div class="container tweet-title-textarea">
+              <h3>
+                <label for="tweet-text">What are you humming about?</label>
+              </h3>
+                <textarea name="text" id="tweet-text" placeholder="tweet here..." autofocus></textarea>
+            </div>
+            <div class="container form-button-count">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    
+    </div>
+
   </body>
 </html>
