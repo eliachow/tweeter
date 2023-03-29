@@ -26,7 +26,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Screenshot of desktop view of Tweeter app"](https://github.com/eliachow/tweeter/blob/master/public/docs/tweeter_1.PNG?raw=true)
 
-### Mobile & Table View
+### Mobile & Tablet View
 
 !["Screenshot of mobile & tablet view of Tweeter app"](https://github.com/eliachow/tweeter/blob/master/public/docs/tweeter_2.PNG?raw=true)
 
