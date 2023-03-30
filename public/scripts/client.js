@@ -6,9 +6,9 @@
 
 $(document).ready(function() {
 
-  // render tweet form using slideDown when nav button is clicked
   
   // 👉👉👉Strecht activity incomplete: import form, blocking post request
+  // render tweet form using slideDown when nav button is clicked
   const $newTweetForm = $(``);
 
   $(".bounce").on("click", function() {
