@@ -8,7 +8,7 @@ nav {
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   background-color: #D79923;
   height: 120px;
-  width: 100vw;
+  width: 100%;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -55,6 +55,7 @@ nav button:hover {
 
   nav {
       background-color: #4056A1; 
+      background-image: none;
     }
 
     nav button {
